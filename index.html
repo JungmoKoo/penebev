@@ -3,28 +3,35 @@
 
 <head>
   <meta charset="utf-8">
-  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
-  <!-- Replace the content tag with appropriate information -->
-  <meta name="description" content="DESCRIPTION META TAG">
-  <meta property="og:title" content="SOCIAL MEDIA TITLE TAG" />
-  <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG" />
+  <!-- Meta tags for search engines and social media -->
+  <meta name="description"
+    content="PeneBEV: Penetrative Perception for BEV 3D Object Detection. Advanced 3D detection model with improved view representation for autonomous driving.">
+  <meta name="keywords"
+    content="PeneBEV, 3D object detection, BEV, bird's eye view, autonomous driving, deep learning, computer vision">
+  <meta name="author" content="Jung Mo Koo">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
   <meta property="og:url" content="https://jungmokoo.github.io/penebev/" />
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
-  <!-- <meta property="og:image" content="static/image/your_banner_image.png" /> -->
-  <meta property="og:image" content="static/image/OverallArchitecture.pdf" />
+  <meta property="og:title" content="PeneBEV - Advanced 3D Object Detection with Penetrative Perception" />
+  <meta property="og:description"
+    content="PeneBEV: Penetrative Perception for BEV 3D Object Detection. State-of-the-art 3D detection for autonomous driving applications." />
+  <meta property="og:image" content="https://jungmokoo.github.io/penebev/static/image/OverallArchitecture.pdf" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
 
-
-  <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
-  <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
-  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
-  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
-
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <!-- Keywords for your paper to be indexed by-->
-  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:url" content="https://jungmokoo.github.io/penebev/" />
+  <meta name="twitter:title" content="PeneBEV - Advanced 3D Object Detection">
+  <meta name="twitter:description"
+    content="Penetrative Perception for BEV 3D Object Detection in autonomous driving systems.">
+  <meta name="twitter:image" content="https://jungmokoo.github.io/penebev/static/images/naver_labs_favicon.ico">
+
+  <!-- Search Engine Verification and Optimization -->
+  <meta name="google-site-verification" content="your-verification-code-here">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
 
   <title>PeneBEV</title>
@@ -44,6 +51,32 @@
   <script src="static/js/bulma-carousel.min.js"></script>
   <script src="static/js/bulma-slider.min.js"></script>
   <script src="static/js/index.js"></script>
+
+  <!-- Structured Data (JSON-LD) for better SEO -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "PeneBEV: Penetrative Perception for BEV 3D Object Detection",
+    "description": "PeneBEV is an advanced 3D object detection model that uses penetrative perception for bird's eye view representation, designed for autonomous driving applications.",
+    "url": "https://jungmokoo.github.io/penebev/",
+    "author": {
+      "@type": "Person",
+      "name": "Jung Mo Koo"
+    },
+    "datePublished": "2025-11-16",
+    "publisher": {
+      "@type": "Organization",
+      "name": "GitHub Pages",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://jungmokoo.github.io/penebev/static/images/naver_labs_favicon.ico"
+      }
+    },
+    "inLanguage": "en",
+    "keywords": "3D object detection, BEV, autonomous driving, deep learning, computer vision, PeneBEV"
+  }
+  </script>
 </head>
 
 <body>
@@ -100,8 +133,7 @@
 
                 <!-- Github link -->
                 <span class="link-block">
-                  <a href="" target="_blank"
-                    class="external-link button is-normal is-rounded is-dark">
+                  <a href="" target="_blank" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -130,16 +162,15 @@
 
   <!-- Teaser video-->
   <section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video poster="" id="tree" autoplay muted loop height="100%">
-        <source src="assets/videos/main_video.mp4"
-        type="video/mp4">
-      </video>
-      <br><br>
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video poster="" id="tree" autoplay muted loop height="100%">
+          <source src="assets/videos/main_video.mp4" type="video/mp4">
+        </video>
+        <br><br>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
   <!-- End teaser video -->
 
   <!-- Paper abstract -->
@@ -151,15 +182,21 @@
           <div class="content has-text-justified">
             <p>
               Bird's-Eye-View (BEV) segmentation is a essential technology for safe and efficient navigation.
-              This is even more necessary in indoor driving, where there are dynamic and unstructured objects such as people and robot.
-              However, since there is no way to generate training data, most of the researches have been conducted mainly in outdoor environments.
+              This is even more necessary in indoor driving, where there are dynamic and unstructured objects such as
+              people and robot.
+              However, since there is no way to generate training data, most of the researches have been conducted
+              mainly in outdoor environments.
               In this paper, we propose an innovative approach to address this challenge.
-              We automatically generate BEV training data for indoor environments based on the physics engine of a simulator.
+              We automatically generate BEV training data for indoor environments based on the physics engine of a
+              simulator.
               This eliminates the needs for tons of real data and virtual environments.
               We also propose a lightweight network architecture capable of BEV panoptic segmentation in real-time.
-              Based on this network and simple image processing, our framework shows fast but also robust performance in real-world environments with <font color="e51e78"><strong>no gap between simulation and reality</strong></font>.
+              Based on this network and simple image processing, our framework shows fast but also robust performance in
+              real-world environments with <font color="e51e78"><strong>no gap between simulation and reality</strong>
+              </font>.
               The network can inference at a speed of about 61 FPS on AGX Orin in FP16 mode.
-              Furthermore, it outperforms existing algorithms in the semantic segmentation task, achieving 14% higher mIoU.
+              Furthermore, it outperforms existing algorithms in the semantic segmentation task, achieving 14% higher
+              mIoU.
             </p>
           </div>
         </div>
@@ -206,57 +243,69 @@
 
   <section class="section hero">
     <div class="container is-max-desktop">
-      <center><h2 class="title is-3">BEV Data Generation</h2></center><br>
-      <center>We propose <strong style="color: #e51e78;">NLST</strong> (NAVER LABS Sliding Things), a highly effective method for generating indoor scenes. <br>This method leverages the simulator's physics engine to collect data across various scenarios. </center><br>
+      <center>
+        <h2 class="title is-3">BEV Data Generation</h2>
+      </center><br>
+      <center>We propose <strong style="color: #e51e78;">NLST</strong> (NAVER LABS Sliding Things), a highly effective
+        method for generating indoor scenes. <br>This method leverages the simulator's physics engine to collect data
+        across various scenarios. </center><br>
       <div class="columns is-centered has-text-centered">
         <!-- <div class="column is-four-fifths"> -->
-          <!-- <div class="hero body"> -->
-            <video poster="" id="tree" autoplay muted loop height="100%" playsinline>
-              <!-- Your video here -->
-              <source src="assets/videos/nlst_video.mp4"
-              type="video/mp4">
-            </video>
-          <!-- </div> -->
-        </div>
-        <br>
-        <center><h2 class="title is-5">Generation Results</h2></center>
-        <hr style="margin: 4px 0; border: none; height: 1px; background-color: transparent;">
-        <center>During the sliding process, varying distances and collisions between objects generate a wide variety of data from a single scene.</center><br>
-        <div class="columns is-centered has-text-centered">
-          <!-- <div class="column is-four-fifths"> -->
-            <!-- <div class="hero body"> -->
-              <video poster="" id="tree" autoplay muted loop height="100%" playsinline>
-                <!-- Your video here -->
-                <source src="assets/videos/nlst_data.mp4"
-                type="video/mp4">
-              </video>
-            <!-- </div> -->
-        </div>
-        <figcaption>* Front semantic map (left) and BEV semantic map (right)</figcaption>
-        
+        <!-- <div class="hero body"> -->
+        <video poster="" id="tree" autoplay muted loop height="100%" playsinline>
+          <!-- Your video here -->
+          <source src="assets/videos/nlst_video.mp4" type="video/mp4">
+        </video>
+        <!-- </div> -->
       </div>
-      
+      <br>
+      <center>
+        <h2 class="title is-5">Generation Results</h2>
+      </center>
+      <hr style="margin: 4px 0; border: none; height: 1px; background-color: transparent;">
+      <center>During the sliding process, varying distances and collisions between objects generate a wide variety of
+        data from a single scene.</center><br>
+      <div class="columns is-centered has-text-centered">
+        <!-- <div class="column is-four-fifths"> -->
+        <!-- <div class="hero body"> -->
+        <video poster="" id="tree" autoplay muted loop height="100%" playsinline>
+          <!-- Your video here -->
+          <source src="assets/videos/nlst_data.mp4" type="video/mp4">
+        </video>
+        <!-- </div> -->
+      </div>
+      <figcaption>* Front semantic map (left) and BEV semantic map (right)</figcaption>
+
+    </div>
+
     </div>
   </section>
 
   <section class="section hero is-light">
     <div class="container is-max-desktop">
-      <center><h2 class="title is-3">PeneBEV</h2></center><br>
-      <center>We propose a lightweight BEV panoptic segmentation network called <strong style="color: #e51e78;">PeneBEV</strong> (Penetrating Bird’s-EyeView).<br>This network was trained using only the NLST dataset, a fully automatically generated dataset.<br>It achieved 61 FPS when running in FP16 mode on the AGX Orin.</center>
+      <center>
+        <h2 class="title is-3">PeneBEV</h2>
+      </center><br>
+      <center>We propose a lightweight BEV panoptic segmentation network called <strong
+          style="color: #e51e78;">PeneBEV</strong> (Penetrating Bird’s-EyeView).<br>This network was trained using only
+        the NLST dataset, a fully automatically generated dataset.<br>It achieved 61 FPS when running in FP16 mode on
+        the AGX Orin.</center>
       <img src="assets/images/overall_architecture.png">
-      </div>      
+    </div>
     </div>
   </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-    <center><h2 class="title is-3">Visual Comparisons</h2></center>
-    <br>
-    <center>Click the buttons below to see the inference results for each image under different environments!</center>
-    <!-- <br> -->
-    <hr style="margin: 4px 0; border: none; height: 1px; background-color: transparent;">
-    <center><button id="Real" class="custom-btn btn-1" onclick="changeImage('example1_penebev', 'assets/images/compare_1_penebev.png', this); 
+  <section class="section">
+    <div class="container is-max-desktop">
+      <center>
+        <h2 class="title is-3">Visual Comparisons</h2>
+      </center>
+      <br>
+      <center>Click the buttons below to see the inference results for each image under different environments!</center>
+      <!-- <br> -->
+      <hr style="margin: 4px 0; border: none; height: 1px; background-color: transparent;">
+      <center><button id="Real" class="custom-btn btn-1" onclick="changeImage('example1_penebev', 'assets/images/compare_1_penebev.png', this); 
       changeImage('example1_cam2bev', 'assets/images/compare_1_cam2bev.png', this); 
       changeImage('example2_penebev', 'assets/images/compare_2_penebev.png', this); 
       changeImage('example2_cam2bev', 'assets/images/compare_2_cam2bev.png', this); 
@@ -274,7 +323,7 @@
       changeTopLabel('example4_top_label', false, this);
       ">Real</button>
 
-    <button id="Sim" class="custom-btn btn-1" onclick="changeImage('example1_penebev', 'assets/images/compare_sim_1_alg.png', this); 
+        <button id="Sim" class="custom-btn btn-1" onclick="changeImage('example1_penebev', 'assets/images/compare_sim_1_alg.png', this); 
       changeImage('example1_cam2bev', 'assets/images/compare_sim_1_gt.png', this); 
       changeImage('example2_penebev', 'assets/images/compare_sim_2_alg.png', this); 
       changeImage('example2_cam2bev', 'assets/images/compare_sim_2_gt.png', this); 
@@ -293,164 +342,167 @@
       ">Sim.</button>
 
 
-    <div class="content has-text-justified">
-      <p>
-      </p>
-    </div>
-    
-    <div class="columns is-centered">
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <div class="columns is-centered">
-            <div class="column is-full-width">
-              <div id="example1" class="bal-container-small">
-      
-                <div class="bal-after">
-                  <img id='example1_penebev' src="assets/images/compare_1_penebev.png">
-                  <div class="bal-afterPosition afterLabel">
-                    PeneBEV (Ours)
-                  </div>
-                  <div id="example1_top_label" class="bal-afterPosition afterLabelTop" style="display: none;">
-                    Cam2BEV
-                  </div>
-                </div>
-              
-                <div class="bal-before">
-                  <div class="bal-before-inset">
-                  <img id='example1_cam2bev' src="assets/images/compare_1_cam2bev.png">
-                    <div id="example1_label" class="bal-beforePosition beforeLabel">
-                      Cam2BEV
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="bal-handle">
-                  <span class=" handle-left-arrow"></span>
-                  <span class="handle-right-arrow"></span>
-                </div>
-              
-              </div>
-              
-              <br>
-
-              <div id="example2" class="bal-container-small">
-      
-                <div class="bal-after">
-                  <img id='example2_penebev' src="assets/images/compare_2_penebev.png">
-                  <div class="bal-afterPosition afterLabel">
-                    PeneBEV (Ours)
-                  </div>
-                  <div id="example2_top_label" class="bal-afterPosition afterLabelTop" style="display: none;">
-                    Cam2BEV
-                  </div>
-                </div>
-              
-                <div class="bal-before">
-                  <div class="bal-before-inset">
-                  <img id='example2_cam2bev' src="assets/images/compare_2_cam2bev.png">
-                    <div id="example2_label" class="bal-beforePosition beforeLabel">
-                      Cam2BEV
-                    </div>
-                  </div>
-                </div>
-              
-                <div class="bal-handle">
-                  <span class=" handle-left-arrow"></span>
-                  <span class="handle-right-arrow"></span>
-                </div>
-              
-              </div>
-            </div>
-          </div>
+        <div class="content has-text-justified">
+          <p>
+          </p>
         </div>
-      </div>
-      
-      <!--/ Visual Effects. -->
 
-      <!-- Matting. -->
-      <div class="column">
         <div class="columns is-centered">
-          <div class="column content">
-            
-            <div id="example4" class="bal-container-small">
-              <div class="bal-after">
-                <img id='example3_penebev' src="assets/images/compare_3_penebev.png">
-                <div class="bal-afterPosition afterLabel">
-                  PeneBEV (Ours)
-                </div>
-                <div id="example3_top_label" class="bal-afterPosition afterLabelTop" style="display: none;">
-                  Cam2BEV
-                </div>
-              </div>
-            
-              <div class="bal-before">
-                <div class="bal-before-inset">
-                <img id='example3_cam2bev' src="assets/images/compare_3_cam2bev.png">
-                  <div id="example3_label" class="bal-beforePosition beforeLabel">
-                    Cam2BEV
+          <!-- Visual Effects. -->
+          <div class="column">
+            <div class="content">
+              <div class="columns is-centered">
+                <div class="column is-full-width">
+                  <div id="example1" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img id='example1_penebev' src="assets/images/compare_1_penebev.png">
+                      <div class="bal-afterPosition afterLabel">
+                        PeneBEV (Ours)
+                      </div>
+                      <div id="example1_top_label" class="bal-afterPosition afterLabelTop" style="display: none;">
+                        Cam2BEV
+                      </div>
+                    </div>
+
+                    <div class="bal-before">
+                      <div class="bal-before-inset">
+                        <img id='example1_cam2bev' src="assets/images/compare_1_cam2bev.png">
+                        <div id="example1_label" class="bal-beforePosition beforeLabel">
+                          Cam2BEV
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+
+                  </div>
+
+                  <br>
+
+                  <div id="example2" class="bal-container-small">
+
+                    <div class="bal-after">
+                      <img id='example2_penebev' src="assets/images/compare_2_penebev.png">
+                      <div class="bal-afterPosition afterLabel">
+                        PeneBEV (Ours)
+                      </div>
+                      <div id="example2_top_label" class="bal-afterPosition afterLabelTop" style="display: none;">
+                        Cam2BEV
+                      </div>
+                    </div>
+
+                    <div class="bal-before">
+                      <div class="bal-before-inset">
+                        <img id='example2_cam2bev' src="assets/images/compare_2_cam2bev.png">
+                        <div id="example2_label" class="bal-beforePosition beforeLabel">
+                          Cam2BEV
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="bal-handle">
+                      <span class=" handle-left-arrow"></span>
+                      <span class="handle-right-arrow"></span>
+                    </div>
+
                   </div>
                 </div>
               </div>
-            
-              <div class="bal-handle">
-                <span class=" handle-left-arrow"></span>
-                <span class="handle-right-arrow"></span>
-              </div>
-            
             </div>
-            
-            <br>
-            
-            <div id="example5" class="bal-container-small">
-              <div class="bal-after">
-                <img id='example4_penebev' src="assets/images/compare_4_penebev.png">
-                <div class="bal-afterPosition afterLabel">
-                  PeneBEV (Ours)
-                </div>
-                <div id="example4_top_label" class="bal-afterPosition afterLabelTop" style="display: none;">
-                  Cam2BEV
-                </div>
-              </div>
-            
-              <div class="bal-before">
-                <div class="bal-before-inset">
-                <img id='example4_cam2bev' src="assets/images/compare_4_cam2bev.png">
-                  <div id="example4_label" class="bal-beforePosition beforeLabel">
-                    Cam2BEV
+          </div>
+
+          <!--/ Visual Effects. -->
+
+          <!-- Matting. -->
+          <div class="column">
+            <div class="columns is-centered">
+              <div class="column content">
+
+                <div id="example4" class="bal-container-small">
+                  <div class="bal-after">
+                    <img id='example3_penebev' src="assets/images/compare_3_penebev.png">
+                    <div class="bal-afterPosition afterLabel">
+                      PeneBEV (Ours)
+                    </div>
+                    <div id="example3_top_label" class="bal-afterPosition afterLabelTop" style="display: none;">
+                      Cam2BEV
+                    </div>
                   </div>
+
+                  <div class="bal-before">
+                    <div class="bal-before-inset">
+                      <img id='example3_cam2bev' src="assets/images/compare_3_cam2bev.png">
+                      <div id="example3_label" class="bal-beforePosition beforeLabel">
+                        Cam2BEV
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bal-handle">
+                    <span class=" handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
+                </div>
+
+                <br>
+
+                <div id="example5" class="bal-container-small">
+                  <div class="bal-after">
+                    <img id='example4_penebev' src="assets/images/compare_4_penebev.png">
+                    <div class="bal-afterPosition afterLabel">
+                      PeneBEV (Ours)
+                    </div>
+                    <div id="example4_top_label" class="bal-afterPosition afterLabelTop" style="display: none;">
+                      Cam2BEV
+                    </div>
+                  </div>
+
+                  <div class="bal-before">
+                    <div class="bal-before-inset">
+                      <img id='example4_cam2bev' src="assets/images/compare_4_cam2bev.png">
+                      <div id="example4_label" class="bal-beforePosition beforeLabel">
+                        Cam2BEV
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="bal-handle">
+                    <span class=" handle-left-arrow"></span>
+                    <span class="handle-right-arrow"></span>
+                  </div>
+
                 </div>
               </div>
-            
-              <div class="bal-handle">
-                <span class=" handle-left-arrow"></span>
-                <span class="handle-right-arrow"></span>
-              </div>
-            
             </div>
           </div>
         </div>
-      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Image carousel -->
+  <!-- Image carousel -->
   <section class="hero is-small is-light">
     <div class="hero-body">
-      <center><h2 class="title is-3">Experimental Results</h2></center><br>
-      <center>PeneBEV-tiny is the smallest model, PeneBEV-s is the small model, and PeneBEV-m is the medium model.</center>
+      <center>
+        <h2 class="title is-3">Experimental Results</h2>
+      </center><br>
+      <center>PeneBEV-tiny is the smallest model, PeneBEV-s is the small model, and PeneBEV-m is the medium model.
+      </center>
       <div class="container is-max-desktop">
         <div id="results-carousel" class="carousel results-carousel">
           <div class="item">
-            <img src="assets/images/exp_result1.png"/>
+            <img src="assets/images/exp_result1.png" />
             <h2 class="subtitle has-text-centered" style="font-size: 16px; margin-top: 7px;">
-              Comprehensive Performance Metrics for PeneBEV and RTMDet Models in Scene Understanding Tasks.              
+              Comprehensive Performance Metrics for PeneBEV and RTMDet Models in Scene Understanding Tasks.
             </h2>
           </div>
           <div class="item">
-            <img src="assets/images/exp_result2.png"/>
-            <h2 class="subtitle has-text-centered"  style="font-size: 16px; margin-top: 7px;">
+            <img src="assets/images/exp_result2.png" />
+            <h2 class="subtitle has-text-centered" style="font-size: 16px; margin-top: 7px;">
               IOU (%) for each class on the evaluation dataset
             </h2>
           </div>
@@ -460,7 +512,7 @@
   </section>
   <!-- End image carousel -->
 
-<!-- <section class="section hero is-light">
+  <!-- <section class="section hero is-light">
   <div class="container is-max-desktop">
     <center><h2 class="title is-3">Experimental Result</h2></center><br>
     <center>We propose a lightweight BEV panoptic segmentation network called <strong style="color: #e51e78;">PeneBEV</strong> (Penetrating Bird’s-EyeView).<br>This network was trained using only the NLST dataset, a fully automatically generated dataset.<br>It achieved 61 FPS when running in FP16 mode on the AGX Orin.</center>
@@ -475,14 +527,17 @@
     <div class="hero-body">
       <div class="container is-max-desktop">
         <!-- Paper video. -->
-        <center><h2 class="title is-3">Video Presentation</h2></center><br>
+        <center>
+          <h2 class="title is-3">Video Presentation</h2>
+        </center><br>
         <div class="columns is-centered has-text-centered">
           <div class="column is-four-fifths">
 
             <div class="publication-video">
               <!-- Youtube embed code here -->
               <!-- <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
-              <iframe src="https://www.youtube.com/embed/j_xf1Idb9H0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+              <iframe src="https://www.youtube.com/embed/j_xf1Idb9H0" frameborder="0" allow="autoplay; encrypted-media"
+                allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -571,7 +626,7 @@
               <!-- <img src="static/images/naverlabs.jpg" onclick="window.open()"> -->
               <!-- <div class="column has-text-centered">
                 <a href="https://www.naverlabs.com/"><img src="static/images/naverlabs.jpg" alt="naver labs" style="width:42px;height:auto;"></a>
-              </div> -->              
+              </div> -->
               <br> This website is licensed under a <a rel="license"
                 href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
                 Commons Attribution-ShareAlike 4.0 International License</a>.
@@ -589,56 +644,56 @@
 
   <!-- End of Statcounter Code -->
 
-<script src="static/js/before_after.js"></script>
+  <script src="static/js/before_after.js"></script>
 
-<script>
+  <script>
     new BeforeAfter({
-        id: '#example1'
+      id: '#example1'
     });
     new BeforeAfter({
-        id: '#example2'
+      id: '#example2'
     });
     new BeforeAfter({
-        id: '#example4'
+      id: '#example4'
     });
     new BeforeAfter({
-        id: '#example5'
+      id: '#example5'
     });
 
-</script>
+  </script>
 
-<script>
-  function changeImage(imageId, imageSrc, buttonClicked) {
+  <script>
+    function changeImage(imageId, imageSrc, buttonClicked) {
       let image = document.getElementById(imageId);
       image.src = imageSrc;
 
       let buttons = document.getElementsByTagName('button');
       for (let i = 0; i < buttons.length; i++) {
-          buttons[i].classList.remove('active');
+        buttons[i].classList.remove('active');
       }
 
       buttonClicked.classList.add('active');
-  }
-</script>
+    }
+  </script>
 
-<script>
-  function changeLabel(labelId, text, buttonClicked) {
+  <script>
+    function changeLabel(labelId, text, buttonClicked) {
       let label = document.getElementById(labelId);
       label.innerText = text;
 
       let buttons = document.getElementsByTagName('button');
       for (let i = 0; i < buttons.length; i++) {
-          buttons[i].classList.remove('active');
+        buttons[i].classList.remove('active');
       }
 
       buttonClicked.classList.add('active');
-  }
-</script>
+    }
+  </script>
 
-<script>
-  function changeTopLabel(labelId, visible, buttonClicked) {
+  <script>
+    function changeTopLabel(labelId, visible, buttonClicked) {
       let label = document.getElementById(labelId);
-      if(visible){
+      if (visible) {
         label.style.display = "block";
       }
       else {
@@ -647,12 +702,12 @@
 
       let buttons = document.getElementsByTagName('button');
       for (let i = 0; i < buttons.length; i++) {
-          buttons[i].classList.remove('active');
+        buttons[i].classList.remove('active');
       }
 
       buttonClicked.classList.add('active');
-  }
-</script>
+    }
+  </script>
 
 </body>
 
