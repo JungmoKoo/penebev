@@ -2,9 +2,8 @@ User-agent: *
 Allow: /
 Allow: /penebev/
 
-# Disallow admin or private areas if any
-Disallow: /admin/
-Disallow: /private/
-
 # Sitemap location
 Sitemap: https://jungmokoo.github.io/penebev/sitemap.xml
+
+# Crawl delay for responsible crawling
+Crawl-delay: 1
