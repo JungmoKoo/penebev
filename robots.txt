@@ -1,9 +1,4 @@
 User-agent: *
 Allow: /
-Allow: /penebev/
 
-# Sitemap location
 Sitemap: https://jungmokoo.github.io/penebev/sitemap.xml
-
-# Crawl delay for responsible crawling
-Crawl-delay: 1
